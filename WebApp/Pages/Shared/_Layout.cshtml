@@ -6,23 +6,19 @@
     <title>@ViewData["Title"] - WebApp</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link href="~/css/custom_bootstrap.css" rel="stylesheet" />
+    <link href="~/css/main.css" rel="stylesheet" />
 </head>
 <body>
     <header>
-            <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #0a415c;">
-                    <a class="navbar-brand" asp-page="/Index">DEVPAGE</a>
-                    <form> class="active-purple-4 abs">
-                        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-                    </form>
-                    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
-                        <span class="navbar-toggler-icon"></span>
+            <nav class="navbar__base">
+                    <a class="navbar__logo" asp-page="/Index">DEVPAGE</a>
+                    <ul class="nav__links">
+                            <li><a class="nav_atag" asp-page="/Feedback">Zgłoś promocje</a></li>
+                            <li><a class="nav_atag" asp-page="/Login">Zaloguj</a></li>
+                    </ul>
+                    <button class="nav__button"> Zaloguj
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarMenu">
-                        <ul class="navbar-nav ml-auto">
-                            <li><a class="nav-item" asp-page="/Feedback">Zgłoś promocje</a></li>
-                            <li><a class="nav-item" asp-page="/Login">Zaloguj</a></li>
-                        </ul>
-                    </div>
             </nav>
     </header>
     <div class="container">
