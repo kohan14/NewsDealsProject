@@ -1,21 +1,25 @@
 ﻿
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+}
+/*Navbar styling - messy as hell, trying things out*/
 .navbar__base {
-    background-color: darkslategray;
+    background-color: #27496d;
     font-family: Montserrat, sans-serif;
-    font-weight:500;
+    font-weight: 500;
     color: ghostwhite !important;
-    font-size:1rem;
+    font-size: 1rem;
     text-decoration: none;
-
     display: flex;
     justify-content: flex-end;
-    align-items:center;
+    align-items: center;
     padding: 15px 2%;
     border-bottom: solid;
     border-bottom-width: 1px;
-    border-bottom-color:black;
+    border-bottom-color: black;
 }
 .navbar__logo{
     margin-right: auto;
@@ -48,18 +52,83 @@ dl, ol, ul {
 }
 
 .nav_atag:hover {
-    color:greenyellow;
+    color:#00a8cc;
 }
 
 .nav__button {
     padding: 9px 25px;
-    background-color: rgba(137, 191, 35, 1);
+    background-color: rgba(12,123,147,0.6);
     border: none;
-    border-radius: 10px;
+    border-radius: 30px;
     cursor: pointer;
     transition: all 0.4s ease 0s;
     margin-left: 20px;
 }
 .nav__button:hover {
-    background-color: rgba(137, 191, 35, 0.6);
+    background-color: rgba(12,123,147,1);
+}
+.toggle__button {
+    position:absolute;
+    top: 1.5rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+
+}
+
+.toggle__button .navbar__bar {
+    height:3px;
+    width:100%;
+    background-color:white;
+    border-radius: 10px;
+}
+@media (max-width: 500px) {
+    .toggle__button {
+        display: flex
+    }
+
+    .navbar__logo {
+        margin-top: 8px;
+    }
+
+    .navbar__base {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav__button {
+        display: none;
+    }
+
+    .nav__links {
+        margin-left: 0;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+        .nav__links li {
+            margin-top: 20px;
+            padding: 0px 0px;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .nav__links li a {
+                text-align: center;
+            }
+
+        .nav__links ul {
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+
+    .nav__links.active {
+        display:flex;
+    }
 }
