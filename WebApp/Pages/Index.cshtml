@@ -4,6 +4,33 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
+<h1>ARTICLE LIST</h1>
+
+<div class="index__center">
+    <div class="grid__website">
+        <div>
+            <div class="grid__article__list">
+                <div class="grid__img grid__item1">IMAGE</div>
+                <div class="grid__info grid__item2">
+                    <div class="article__info__flex">
+                        <div class="article__top">xyz:time ago</div>
+                        <div class="article__top">Author</div>
+                    </div>
+                    <div>@Model.TestArticle.Title</div>
+
+
+
+
+
+
+                </div>
+                <div class="grid__text grid__item3">@Model.TestArticle.Text</div>
+            </div>
+            <div class="grid__article__list">
+                <div class="grid__img grid__item1">IMAGE2</div>
+                <div class="grid__info grid__item2">INFOBOX3</div>
+                <div class="grid__text grid__item3">TEXT4</div>
+            </div>
+        </div>
+    </div>
 </div>

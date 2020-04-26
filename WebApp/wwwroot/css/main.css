@@ -1,10 +1,11 @@
 ﻿
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
 *{
     margin: 0;
     padding: 0;
 }
+
+
 /*Navbar styling - messy as hell, trying things out*/
 .navbar__base {
     background-color: #27496d;
@@ -85,7 +86,7 @@ dl, ol, ul {
     background-color:white;
     border-radius: 10px;
 }
-@media (max-width: 500px) {
+@media (max-width: 1030px) {
     .toggle__button {
         display: flex
     }
@@ -131,4 +132,108 @@ dl, ol, ul {
     .nav__links.active {
         display:flex;
     }
+
+}
+/*Styling for whole index webpage*/
+.index__center {
+    display: flex;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    justify-content: center;
+    align-self: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.grid__website {
+    display: grid;
+    background-color: indianred;
+    grid-template-columns: 786px 394px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+/* Styling ARTICLE CLASS MAIN SITE INDEX ARTICLE*/
+.grid__article__list {
+    display: grid;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 160px 120px;
+    grid-gap: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.grid__item1{
+    background-color: papayawhip;
+}
+.grid__item2 {
+    background-color: white;
+}
+.grid__item3 {
+    background-color: papayawhip;
+}
+
+.grid__img {
+}
+.grid__info {
+}
+.grid__text {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+/* Style for info article section main page*/
+.article__info__flex {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: solid;
+    border-bottom-width: 1px;
+    
+
+}
+.article__top{
+    color:darkgray;
+
+}
+@media (max-width: 1180px) {
+
+    .grid__website {
+        display: grid;
+        background-color: blue;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .index__center {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .grid__article__list {
+        grid-template-columns: 190px 2fr;
+        grid-template-rows: 160px 120px;
+    }
+}
+@media (max-width: 660px) {
+
+    .index__center {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 660px) {
+
+    .grid__article__list {
+        grid-template-columns: 120px 2fr;
+        grid-template-rows: 110px 120px;
+    }
+
 }
