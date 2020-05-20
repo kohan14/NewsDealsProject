@@ -12,17 +12,14 @@
             <div class="grid__article__list">
                 <div class="grid__img grid__item1">IMAGE</div>
                 <div class="grid__info grid__item2">
-                    <div class="article__info__flex">
-                        <div class="article__top">xyz:time ago</div>
-                        <div class="article__top">Author</div>
+                    <div class="article__info__topcontainer">
+                        <div class="article__top">@Model.TestArticle.GetTimeAgo(Model.TestArticle.PublishTime)</div>
+                        <div class="article__top">@Model.TestArticle.Author</div>
                     </div>
-                    <div>@Model.TestArticle.Title</div>
-
-
-
-
-
-
+                    <div class="article__info__botcontainer">
+                        <div class="article__title__font"><strong>@Model.TestArticle.Title</strong></div>
+                        <div class="chaticon__container"><i class="material-icons md-36 color__4">chat</i><span class="chaticon__number">@Model.TestArticle.CommentsCount</span></div>
+                    </div>
                 </div>
                 <div class="grid__text grid__item3">@Model.TestArticle.Text</div>
             </div>

@@ -25,4 +25,8 @@
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="3.1.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\img\article_img\" />
+  </ItemGroup>
+
 </Project>
